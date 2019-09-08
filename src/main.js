@@ -7,14 +7,15 @@ import App from './App'
 Vue.config.productionTip = false
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCILj3t4A38qkrmM_mgtMvVYVJd-G-Psgo",
-  authDomain: "todosample-ae3ab.firebaseapp.com",
-  databaseURL: "https://todosample-ae3ab.firebaseio.com",
-  projectId: "todosample-ae3ab",
-  storageBucket: "",
-  messagingSenderId: "267233218190",
-  appId: "1:267233218190:web:501b0b3b06dfd0c4"
+  apiKey: process.env.FIRE_BASE.apiKey,
+  authDomain: process.env.FIRE_BASE.authDomain,
+  databaseURL: process.env.FIRE_BASE.databaseURL,
+  projectId: process.env.FIRE_BASE.projectId,
+  storageBucket: process.env.FIRE_BASE.storageBucket,
+  messagingSenderId: process.env.FIRE_BASE.messagingSenderId,
+  appId: process.env.FIRE_BASE.appId,
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
